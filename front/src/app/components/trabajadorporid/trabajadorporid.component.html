@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 offset-lg-4">
+      <div class="card bg-light mb-3 mt-5" style="max-width: 25rem;">
+        <div class="card-header text-center">Trabajador</div>
+        <div class="card-body">
+          <form [formGroup]="formTrabajador">
+
+            <input formControlName="dni" type="text" class="form-control" placeholder="Ingrese el dni">
+            <span *ngIf="formTrabajador.get('dni')?.hasError('required') && formTrabajador.get('dni')?.touched" style="font-size: 12px; color: palevioletred;" class="ml-2">El campo nombre es <strong>requerido</strong></span>
+
+            <input formControlName="tipoTrabajador" type="text" class="form-control mt-2" placeholder="Ingrese el tipo de trabajador" >
+            <span *ngIf="formTrabajador.get('tipoTrabajador')?.hasError('required') && formTrabajador.get('tipoTrabajador')?.touched" style="font-size: 12px; color: palevioletred;" class="ml-2">El campo apellido paterno es <strong>requerido</strong></span>
+
+            <input formControlName="salario" type="text" class="form-control mt-2" placeholder="Ingrese salario" >
+            <span *ngIf="formTrabajador.get('salario')?.hasError('required') && formTrabajador.get('salario')?.touched" style="font-size: 12px; color: palevioletred;" class="ml-2">El campo apellido materno es <strong>requerido</strong></span>
+
+            <div class="row mt-2">
+              <div class="col-lg-6"><button type="button" class="btn btn-outline-dark btn-sm" routerLink="/">Volver</button></div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
